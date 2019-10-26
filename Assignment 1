@@ -1,0 +1,15 @@
+
+#how to determine how much money is saved over a period of months given a salaries,
+#savings, interest rates, and months
+
+def amountSavedInMonths(r,current_savings,annual_salary,semi_annual_raise,portion_saved,months):
+    counter = 0
+    while counter <= months:
+        current_savings += current_savings*(r/12)
+        print(current_savings)
+        current_savings += annual_salary/12*portion_saved
+        print(current_savings)
+        counter +=1
+    return current_savings
+
+print(amountSavedInMonths(.04,0,10,.07,.5,73))
